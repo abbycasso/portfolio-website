@@ -98,3 +98,8 @@ a:focus {
   background-color: #cad0ff;
   color: #ffffff;
 }
+
+.my-logo {
+  height: 500px;
+  width: 500px;
+}
