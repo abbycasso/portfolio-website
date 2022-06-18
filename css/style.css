@@ -79,6 +79,8 @@ a:active {
   text-decoration: none;
 }
 
+transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
+
 .button {
   display: inline-block;
   background-color: #cad0ff;
@@ -92,7 +94,6 @@ a:active {
 }
 
 .button:hover {
-  color: #1f2122;
   opacity: 0.8;
   text-decoration: none;
 }
@@ -116,8 +117,8 @@ a:active {
 }
 
 .logo {
-  max-height: 250px;
-  max-width: 250px;
+  max-height: 200px;
+  max-width: 200px;
 }
 
 .icon {
@@ -135,6 +136,12 @@ a:active {
   margin: 25px 0;
 }
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 #work .row {
   padding-bottom: 25px; border-bottom: 1px solid #1f2122;
 }
@@ -146,7 +153,7 @@ a:active {
 header {
   background-color: #ffffff;
   text-align: center;
-  padding: 5px 0 10px 0;
+  padding: 0px 0 8px 0;
   box-shadow: 0px 1px 5px 0px rgba(30, 30, 30, 0.2);
   position: fixed;
   width: 100%;
@@ -162,7 +169,7 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
-  padding: 0 15px;
+  padding: 0 25px;
   text-transform: uppercase;
   font-weight: 600;
   color: #4a4a4a;
@@ -178,7 +185,7 @@ nav > ul > li > a {
 }
 
   main {
-  padding-top: 329px;
+  padding-top: 276px;
 }
 
 #work h2 {
@@ -213,4 +220,99 @@ nav > ul > li > a {
 
 #bodhi-takeaways .row {
   padding-bottom: 25px; border-bottom: 1px solid #1f2122;
+}
+
+.left {
+  text-align: left;
+  color: #ffffff;
+}
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation: 36s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+  text-align: unset;
+  padding: 10px 0;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 80px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  #hero {
+    text-align: center;
+  }
+
+  #hero span {
+  display: block;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 0 10px;
+  }
+
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+
+  .col-lg-7 {
+    width: 60%;
+    float: left;
+  }
+
+  .col-lg-5 {
+    width: 40%;
+    float: right;
+  }
+
+  .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
