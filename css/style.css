@@ -79,18 +79,16 @@ a:active {
   text-decoration: none;
 }
 
-transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
-
 .button {
   display: inline-block;
   background-color: #cad0ff;
   color: #1f2122;
-  color: #ffffff;
   font-weight: 600;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #1f2122;
-  transition: 0.2s opacity;
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
 
 .button:hover {
@@ -106,13 +104,13 @@ transition: [transition-property] [transition-duration] [transition-timing-funct
 
 .button.contact {
   background-color: transparent;
-  color: #cad0ff;
+  color: #f85c70;
   text-transform: uppercase;
-  border: 2px solid #cad0ff;
+  border: 2px solid #f85c70;
 }
 
 .button.contact:hover {
-  background-color: #cad0ff;
+  background-color: #f85c70;
   color: #ffffff;
 }
 
