@@ -9,21 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ace72c5ca8.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <div>
-        <picture>
-          <source srcset="img/aclogo@1x.png" media="(max-width:767px)">
-          <img src="img/aclogo@1x.png" class="logo" alt="AC Portfolio Logo">
-        </picture>
-        <nav>
-          <ul>
-            <li><a href="index.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="navtoggle" id="myNavtoggle">
+          <picture>
+            <source srcset="img/aclogo@1x.png" media="(max-width:767px)">
+            <img src="img/aclogo@1x.png" class="logo" alt="AC Portfolio Logo">
+          </picture>
+          <nav>
+            <ul>
+              <li><a href="index.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+              <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main id="bodhi">
@@ -384,6 +388,10 @@
         <p>Copyright Abby Casso 2022</p>
       </div>
     </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
