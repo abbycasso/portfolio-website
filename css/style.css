@@ -115,8 +115,8 @@ a:active {
 }
 
 .logo {
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 150px;
+  max-width: 150px;
 }
 
 .icon {
@@ -150,7 +150,6 @@ a:active {
 
 header {
   background-color: #ffffff;
-  text-align: center;
   padding: 0px 0 8px 0;
   box-shadow: 0px 1px 5px 0px rgba(30, 30, 30, 0.2);
   position: fixed;
@@ -160,10 +159,7 @@ header {
 nav > ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav > ul > li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav > ul > li > a {
@@ -175,6 +171,40 @@ nav > ul > li > a {
   width: 100%;
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  padding-right: 0;
+  top: 80px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid #ffffff;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
 #hero {
   background-color: #ffffff;
   padding: 20px 0;
@@ -183,7 +213,7 @@ nav > ul > li > a {
 }
 
   main {
-  padding-top: 276px;
+  padding-top: 160px;
 }
 
 #work h2 {
@@ -258,7 +288,7 @@ Medium devices (640px and larger)
 @media only screen and (min-width: 640px) {
   header {
   text-align: unset;
-  padding: 10px 0;
+  padding: 0 4px;
   }
 
   nav {
@@ -266,6 +296,22 @@ Medium devices (640px and larger)
     float: right;
     margin-top: 80px;
   }
+
+  nav > ul {
+    margin: 1em 0;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+.navtoggle li:last-child {
+  display: none;
+}
 
   body {
     font-size: 18px;
@@ -296,6 +342,15 @@ Large devices (1024px or larger)
 @media only screen and (min-width: 1024px) {
   body {
     font-size: 20px;
+  }
+
+  main {
+  padding-top: 209px;
+}
+
+  .logo {
+    max-height: 200px;
+    max-width: 200px;
   }
 
   .col-lg-7 {
