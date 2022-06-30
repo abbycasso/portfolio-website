@@ -145,6 +145,10 @@ a:active {
   padding-bottom: 25px; border-bottom: 1px solid #1f2122;
 }
 
+#about2 .row {
+  border-bottom: 1px solid #1f2122;
+}
+
 #hero h1 {
   text-align: center;
 }
